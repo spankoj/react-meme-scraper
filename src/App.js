@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import image from './0_meme.jpg';
+import RandomMeme from './RandomMeme.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="header">
+        <h1>Random Meme Generator</h1>
+        <img src={image} alt="meme" className="img" />
       </header>
+      <h2>Generate custom text!</h2>
+      <RandomMeme />
     </div>
   );
 }

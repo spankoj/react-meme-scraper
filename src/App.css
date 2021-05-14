@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #dcdcdc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.img {
+  display: block;
+  margin: auto;
+  width: 40%;
+  border-radius: 20%;
+  padding: 10px;
+}
+
+.btn {
+  color: #fff;
+  background: steelblue;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: auto;
+}
+
+.interface {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 20px auto;
+  color: #fff;
+  background: steelblue;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  width: auto;
+}
+
+.a {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.b {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.c {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.d {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.btn-input {
+  color: #000;
+  background: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin: 10px;
+  width: auto;
 }
