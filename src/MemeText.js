@@ -1,10 +1,12 @@
 import { useState } from 'react';
 
 const MemeText = ({ memes, setMemes }) => {
+  //sending down props
+  // Creating use states for input and sroll down actions
   const [topInput, setTopInput] = useState('meme');
   const [bottomInput, setBottomInput] = useState('memes_everywhere');
   const [memeId, setMemeId] = useState('');
-
+  // Creating the handler functions
   const handleChangeTop = (e) => setTopInput(e.target.value);
   const handleChangeBottom = (e) => setBottomInput(e.target.value);
   const handleSelect = (e) => {
@@ -17,11 +19,15 @@ const MemeText = ({ memes, setMemes }) => {
         <div className="a">
           <h3>Choose meme</h3>
           <select name="name" id="id" onChange={handleSelect}>
-            {memes.map((meme) => (
-              <option key={meme.id} value={meme.id}>
-                {meme.name}
-              </option>
-            ))}
+            {memes.map(
+              (
+                meme, //user able to choose from API's objects names
+              ) => (
+                <option key={meme.id} value={meme.id}>
+                  {meme.name}
+                </option>
+              ),
+            )}
           </select>
         </div>
         <div className="b">
@@ -45,7 +51,7 @@ const MemeText = ({ memes, setMemes }) => {
         </div>
       </div>
       <img
-        src={`https://api.memegen.link/images/${memeId}/${topInput}/${bottomInput}.png`}
+        src={`https://api.memegen.link/images/${memeId}/${topInput}/${bottomInput}.png`} // using template literals to modify the url to show
         alt="meme"
         className="img"
       />
