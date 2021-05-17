@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const RandomMeme = () => {
+const MemeText = () => {
   // const handleClick = () => useState();
   const [topInput, setTopInput] = useState('meme');
   const [bottomInput, setBottomInput] = useState('memes_everywhere');
@@ -36,4 +36,4 @@ const RandomMeme = () => {
   );
 };
 
-export default RandomMeme;
+export default MemeText;
