@@ -1,7 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import MemeText from './MemeText.js';
-import SelectMeme from './SelectMeme.js';
+
+// import SelectMeme from './SelectMeme.js';
 
 const memesArr = [
   {
@@ -48,10 +49,8 @@ function App() {
         <h1>Random Meme Generator</h1>
         {/* <img src={image} alt="meme" className="img" /> */}
       </header>
-      <h2>Select meme!</h2>
-      <SelectMeme memes={memes} setMemes={setMemes} />
-      <h2>Generate custom text!</h2>
-      <MemeText />
+      <h2>Select meme and generate custom text!</h2>
+      <MemeText memes={memes} setMemes={setMemes} />
     </div>
   );
 }
