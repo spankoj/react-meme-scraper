@@ -2,10 +2,12 @@ import { useState } from 'react';
 
 const MemeText = ({ memes, setMemes }) => {
   //sending down props
+
   // Creating use states for input and sroll down actions
   const [topInput, setTopInput] = useState('meme');
   const [bottomInput, setBottomInput] = useState('memes_everywhere');
   const [memeId, setMemeId] = useState('');
+
   // Creating the handler functions
   const handleChangeTop = (e) => setTopInput(e.target.value);
   const handleChangeBottom = (e) => setBottomInput(e.target.value);
