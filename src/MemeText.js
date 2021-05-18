@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const MemeText = ({ memes, setMemes }) => {
-  //sending down props
+  // sending down props
 
   // Creating use states for input and sroll down actions
   const [topInput, setTopInput] = useState('meme');
@@ -23,7 +23,7 @@ const MemeText = ({ memes, setMemes }) => {
           <select name="name" id="id" onChange={handleSelect}>
             {memes.map(
               (
-                meme, //user able to choose from API's objects names
+                meme, // user able to choose from API's objects names
               ) => (
                 <option key={meme.id} value={meme.id}>
                   {meme.name}
